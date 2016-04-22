@@ -11,11 +11,17 @@ public class TestDriver
 
 		try
 		{
-			Graph graph = new Graph("graph1.txt");
+			Graph graph = new Graph("graph2.txt");
 			PartialTreeList list = MST.initialize(graph);
+				//System.out.println("hineini");
+				list.remove();
 
+			
+			
+			
+			//THIS BLOCK PRINTS OUT THE TREE LIST AND QUEUES
 			Iterator<PartialTree> iterator = list.iterator();
-			// get the current tree
+		//	 get the current tree
 			do
 			{
 				PartialTree curr = iterator.next();
