@@ -88,12 +88,14 @@ public class PartialTreeList implements Iterable<PartialTree>
 	 */
 	public PartialTree remove() throws NoSuchElementException
 	{
-		
 		PartialTree temp = rear.next.tree;
 			if (size==1)
 				rear = null;
 			else
-				rear.next=rear.next.next;
+				{
+					rear.next=rear.next.next;
+					size--;
+				}
 			return temp;
 		
 	}
